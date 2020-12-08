@@ -2,6 +2,16 @@ body {
 	background: black;
 }
 
+a{
+    font-size: x-large;
+    color: gray;
+}
+
+/* .navbar-nav {
+    margin-right: auto;
+    
+} */
+
 #landing-header {
   z-index: 1;
   position: relative;

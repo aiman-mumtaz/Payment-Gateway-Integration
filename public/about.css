@@ -1,0 +1,23 @@
+
+body,html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	align-items: center;
+    height: 100%;
+    background-image: url(https://www.sarthakfoundation.org/uploads/product1546410950.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+body div {
+    
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: 900;
+    text-align: center;
+}

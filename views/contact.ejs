@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    <link rel="stylesheet" href="/contact.css">
+    <style>
+        
+        nav a{
+            font-size: large;
+            color: gray;
+        }   
+    </style>
+    <title>Contact Us</title>
+</head>
+</body>
+        <nav class="navbar fixed-top navbar-expand-md bg-dark"> 
+  
+            <ul class="navbar-nav"> 
+                <li class="nav-item active"> 
+                    <a class="nav-link" href="/"> 
+                        <img src="https://cdn2.vectorstock.com/i/1000x1000/09/16/children-read-book-dreams-logo-template-symbol-vector-31680916.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Backing Brilliance
+                    </a> 
+                </li> 
+            </ul> 
+            <ul class="navbar-nav inline">
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/about"> About </a> 
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact"> Contact Us </a> 
+                </li>
+            </ul>
+        </nav> 
+
+        <br>
+  <!-- Contact Us Section -->
+  <section class="Material-contact-section section-padding section-dark">
+    <div class="container">
+        <div class="row">
+            <!-- Section Titile -->
+            <div style="font-size: x-large;"  class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="section-title">Can't Wait to Hear From You!</h1> <br>
+            </div>
+              <div class="row">
+                <!-- Section Titile -->
+                <div style="font-size: large;"  class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <p >While we're good with smoke signals, there are simpler ways for us to get in touch and answer your questions. </p><br><br><br>
+                  <div class="find-widget">
+                   Company:  <a href="/">Backing Brilliance</a>
+                  </div>
+                  <div class="find-widget">
+                   Address: <a href="#">4435 Diagon Alley</a>
+                  </div>
+                  <div class="find-widget">
+                    Phone:  <a href="#">+91 9999 999 999</a>
+                  </div>
+                  
+                  <div class="find-widget">
+                    Website:  <a href="/">www.backing.brilliance.co</a>
+                  </div>
+                  <div class="find-widget">
+                     Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
+                  </div>
+                </div>
+
+            <!-- contact form -->
+            <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                    <!-- Name -->
+                    <div class="form-group label-floating">
+                      <label class="control-label" for="name"></label>
+                      <input class="form-control" id="name"placeholder="Full Name" type="text" name="name" required data-error="Please enter your name">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- email -->
+                    <div class="form-group label-floating">
+                      <label class="control-label" for="email"></label>
+                      <input class="form-control" id="email"placeholder="Email" type="email" name="email" required data-error="Please enter your Email">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Subject -->
+                    <div class="form-group label-floating">
+                      <label class="control-label"></label>
+                      <input class="form-control" id="msg_subject" type="text" placeholder=" Subject"name="subject" required data-error="Please enter your message subject">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Message -->
+                    <div class="form-group label-floating">
+                        <label for="message" class="control-label"></label>
+                        <textarea class="form-control" rows="3"placeholder=" Message" id="message" name="message" required data-error="Write your message"></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Form Submit -->
+                    <div class="form-submit mt-5">
+                        <button class="btn btn-secondary" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

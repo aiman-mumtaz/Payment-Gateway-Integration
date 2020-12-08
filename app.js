@@ -44,14 +44,17 @@ app.post('/donate', (req,res) => {
         res.render('checkout', {details : details})
         // res.send({"sub": data, "status": "success"})
     }).catch((error) => {
-        res.send({"sub": error, "status": "failed"})
+        res.render('fail')
     })
 })
 
-app.get('/success', (req,res) => {
-    res.render('success')
+app.get('/about', (req,res) => {
+    res.render('about')
 })
 
+app.get('/contact', (req,res)=> {
+    res.render('contact')
+})
 app.get('/fail', (req,res) => {
     res.render('fail')
 })
