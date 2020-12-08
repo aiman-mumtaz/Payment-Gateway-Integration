@@ -1,0 +1,50 @@
+<%- include('./partials/header') %> 
+
+<button class="btn btn-lg btn-success" id="rzp-button1">Pay</button>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+    "key": "rzp_test_W0q2jqxf1ZzWFv", // Enter the Key ID generated from the Dashboard
+    "amount": '<%=parseInt(details.amount*100) %>', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Backing Brilliance",
+    "description": "Charity Fund",
+    "image": "https://cdn2.vectorstock.com/i/1000x1000/09/16/children-read-book-dreams-logo-template-symbol-vector-31680916.jpg",
+    "order_id": "<%= details.payerId %>", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        if (typeof response.razorpay_payment_id == 'undefined' ||  response.razorpay_payment_id < 1) {
+        redirect_url = 'http://localhost:5524/fail';
+        } else {
+        redirect_url = 'http://localhost:5524/success';
+        }
+        location.href = redirect_url;
+    },
+    "prefill": {
+        "name": '<%= details.name %>' ,
+        "email": '<%= details.email %>',
+        "contact": '<%= details.mobile %>'
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
+
+<%- include('./partials/footer') %> 

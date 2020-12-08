@@ -1,0 +1,85 @@
+body {
+	background: black;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://www.worldvision.org/wp-content/uploads/s160366-3-In-the-company-of-books-India-Mshashank-011_743905-640x427.jpg);
+  animation-delay: 6s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://p0.pikist.com/photos/243/905/children-infant-girl-school-reading-studying-india-poor.jpg);
+  animation-delay: 12s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://images.unsplash.com/photo-1595561579181-263fe6175b73?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9vciUyMGNoaWxkcmVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  animation-delay: 18s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://www.worldvision.org/wp-content/uploads/D145-0189-42_703763.jpg);
+  animation-delay: 24s; 
+}
+.slideshow li:nth-child(6) { 
+    background-image: url(https://files.globalgiving.org/pfil/24366/pict_large.jpg?m=1466249018000);
+    animation-delay: 30s; 
+  }
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
