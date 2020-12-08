@@ -1,7 +1,9 @@
 # Payment-Gateway-Integration
 
     A simple website integrating payment gateway. Payment can be done via credit/debit card, net banking, etc.
-    Once the payment is done, an invoice is generated and email is sent to the user confirmingthat the payment is recieved.
+
+    Once the payment is done, an invoice is generated and email is sent to the user confirming that the payment is recieved.
+    
     Watch the demo here https://youtu.be/8_O57enhu80
     
 
